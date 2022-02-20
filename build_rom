@@ -1,7 +1,7 @@
-mkdir -p ~/.bin ~/android/rom ~/ccache/
+mkdir -p ~/.bin ~/android/lund ~/ccache/
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
 chmod a+rx ~/.bin/repo
-cd ~/android/rom
+cd ~/android/lund
 ~/.bin/repo init -u https://github.com/Octavi-OS/platform_manifest.git -b 11 --depth=1 -g default,-device,-mips,-darwin,-notdefault
 mkdir -p .repo/local_manifests
 curl https://raw.githubusercontent.com/snjy4/android_device_motorola_guamp/main/.guamp.xml -o .repo/local_manifests/guamp.xml
