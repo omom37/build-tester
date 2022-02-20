@@ -1,7 +1,7 @@
-mkdir -p ~/.bin ~/android/rom ~/ccache/
+mkdir -p ~/.bin ~/android/lund ~/ccache/
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
 chmod a+rx ~/.bin/repo
-cd ~/android/rom
+cd ~/android/lund
 ~/.bin/repo init -u https://github.com/projectarcana-aosp/manifest.git -b 12.x --depth=1
 mkdir -p .repo/local_manifests
 curl https://raw.githubusercontent.com/monu70152/local_manifest/master/local_manifest.xml -o .repo/local_manifests/local_manifest.xml
