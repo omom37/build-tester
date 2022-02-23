@@ -3,10 +3,10 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
 chmod a+rx ~/.bin/repo
 cd ~/android/rom
 
-~/.bin/repo init -u https://github.com/ProjectRadiant/manifest.git -b twelve --depth=1
+~/.bin/repo init -u https://github.com/ProjectRadiant/manifest.git -b twelve
 mkdir -p .repo/local_manifests
 curl https://raw.githubusercontent.com/monu70152/local_manifest/radiant/local_manifest.xml -o .repo/local_manifests/local_manifest.xml
-~/.bin/repo sync -c --force-sync --no-clone-bundle --no-tags -v
+~/.bin/repo sync -c --force-sync
 printf 'umask = 421' >> ~/ccache/ccache.conf
 ccache -M 9G
 . build/envsetup.sh
