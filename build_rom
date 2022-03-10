@@ -17,5 +17,5 @@ export USE_CCACHE=1
 
 export TZ=Asia/Kolkata
 export SELINUX_IGNORE_NEVERALLOWS=true 
-mka bacon
+make bacon
 
