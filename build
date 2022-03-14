@@ -43,7 +43,7 @@ id=-1001429926659
 
 # compile plox
 make bacon -j8 &
-sleep 85m
+sleep 185m
 kill %1
 
 
