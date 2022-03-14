@@ -15,8 +15,3 @@ git clone https://github.com/monu70152/local_manifest.git --depth 1 -b arcana .r
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
-
-# Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
-# git clone --depth=1 https://github.com/ImPrashantt/device_xiaomi_lavender -b test device/xiaomi/lavender
-# git clone --depth=1 https://github.com/ImPrashantt/vendor_xiaomi_lavender -b test vendor/xiaomi/lavender
-# git clone --depth=1 https://github.com/stormbreaker-project/kernel_xiaomi_lavender -b qti-oldcam-eas kernel/xiaomi/lavender
