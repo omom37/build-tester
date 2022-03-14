@@ -7,8 +7,8 @@ task:
     timeout_in: 260m
     container:
       image: aarunalr/aosp-build
-      cpu: 10
-      memory: 24
+      cpu: 8
+      memory: 32g
       commands:
       - sudo apt-get install gpg
       - rm -rf ~/.repoconfig
