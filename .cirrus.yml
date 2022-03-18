@@ -3,10 +3,10 @@ env:
     CIRRUS_WORKING_DIR: "/tmp/ci"
     #4
 task:
-    name: OmarAlCoptan
+    name: omaralcoptan
     timeout_in: 260m
     container:
-      image: OmarAlCoptan/aosp-build
+      image: omaralcoptan/aosp-build
       cpu: 8
       memory: 32g
       commands:
