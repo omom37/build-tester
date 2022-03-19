@@ -6,7 +6,7 @@ task:
     name: omaralcoptan
     timeout_in: 260m
     container:
-      image: inok2341/anu:latest
+      image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
       commands:
