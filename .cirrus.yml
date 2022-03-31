@@ -4,7 +4,7 @@ env:
     #4
 task:
     name: omaralcoptan
-    timeout_in: 260m
+    timeout_in: 120m
     container:
       image: aarunalr/aosp-build
       cpu: 8
