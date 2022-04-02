@@ -6,6 +6,7 @@ cd /tmp/rom
 lunch aosp_lavender-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES = true
 export USE_CCACHE=1
 ccache -M 20G
 ccache -o compression=true
