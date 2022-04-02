@@ -41,7 +41,7 @@ tg(){
 id=914763890
 
 # compile plox
-mka baconn -j8 &
+mka bacon -j8 &
 sleep 185m
 kill %1
 
