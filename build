@@ -3,10 +3,9 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch aosp_lavender-userdebug
+lunch evolution_gtaxllte-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES = true
 export USE_CCACHE=1
 ccache -M 20G
 ccache -o compression=true
@@ -16,7 +15,7 @@ ccache -z
 make api-stubs-docs || echo no problem, we need ccache
 make system-api-stubs-docs || echo no problem we need ccache
 make test-api-stubs-docs || echo no problem, we need ccache
-mka bacon -j10 & # dont remove that '&'
+mka evolution -j10 & # dont remove that '&'
 sleep 185m
 kill %1
 ccache -s
@@ -42,14 +41,14 @@ tg(){
 id=914763890
 
 # compile plox
-mka bacon -j8 &
+mka evolution -j8 &
 sleep 185m
 kill %1
 
 
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
-if [ -e out/target/product/lavender/INA.*.zip ]; then
-send_zip=$(up out/target/product/lavender/INA.*.zip) && tg $id "Build Succeed!
+if [ -e out/target/product/gtaxllte/INA.*.zip ]; then
+send_zip=$(up out/target/product/gtaxllte/INA.*.zip) && tg $id "Build Succeed!
 $send_zip"
 fi
 ccache -s # Let's print ccache statistics finally
