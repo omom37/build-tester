@@ -6,7 +6,7 @@ task:
     name: omaralcoptan
     timeout_in: 120m
     container:
-      image: aarunalr/aosp-build
+      image: ubuntu:20.04
       cpu: 8
       memory: 32g
       commands:
